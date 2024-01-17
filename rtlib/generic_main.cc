@@ -97,7 +97,6 @@ int main(int argc, char **argv) {
 
 #ifndef OUTSIDE
 #ifndef TIKZ
-  std::cout << "Answer: \n";
 #endif
   obj.print_result(std::cout, res);
 #else

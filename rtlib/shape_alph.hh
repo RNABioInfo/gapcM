@@ -69,6 +69,31 @@ struct ShapeAlph {
         // set_one(t, l-1);
         t |= T(4) << (l-(char_width-1));
         break;
+      case 'U' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(5) << (l-(char_width-1));
+        break;
+      case 'T' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(6) << (l-(char_width-1));
+        break;
+      case 'C' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(7) << (l-(char_width-1));
+        break;
+      case 'K' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(8) << (l-(char_width-1));
+        break;
+      case 'S' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(9) << (l-(char_width-1));
+        break;
       default: assert(false);
     }
   }
@@ -78,6 +103,11 @@ struct ShapeAlph {
       case 2 : return ']';
       case 3 : return '_';
       case 4 : return 'G';
+      case 5 : return 'U';
+      case 6 : return 'T';
+      case 7 : return 'C';
+      case 8 : return 'K';
+      case 9 : return 'S';
       default: return 0;
     }
   }

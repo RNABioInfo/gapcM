@@ -53,7 +53,7 @@ class Eval_List {
       void print(O &out, const T &v) {
         for (typename std::list<Value>::iterator i = list.begin();
              i != list.end(); ++i) {
-          out << "( " << v << " , " << *i << " )\n";
+          out << v << " | " << *i << "\n";
         }
       }
 };
