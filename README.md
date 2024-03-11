@@ -12,7 +12,7 @@
 ############# PLEASE READ ME BEFORE USING THIS REPO ###############
 
 This repo will be used to collect changes to the original gapc that I make while trying to implement RNA 3D Motifs into RNA secondary structure prediction.
-I will mostly keep all original functionalities and only add more, but I can not guarantee that my changes don't have unexpected consequences. Installation procedure remains the same though (at least for now).
+I will mostly keep all original functionalities and only add more, but I can not guarantee that my changes don't have unexpected consequences. Installation at this point is only available from source.
 For the original compiler please refer to /jlab/gapc.
 
 ##############################################################
@@ -46,7 +46,7 @@ runtime:
 ## SOURCES
 
 Always get the latest sources from github:
-`git clone https://github.com/jlab/gapc.git`
+`git clone https://github.com/RNABioInfo/gapcM.git`
 
 
 ## INSTALLATION
@@ -71,33 +71,3 @@ BISON=<bison path>
 --with-boost=<path to booth installation>
 --with-boost-program-options=<path to boost library program options> and --with-boost-unit-test-framework=<path to boost library unit test>
 ```
-
-### conda
-
-You can find [conda](https://bioconda.github.io/user/install.html) packages for linux-64 and osx-64 in the [bioconda channel: https://anaconda.org/bioconda/bellmans-gapc](https://anaconda.org/bioconda/bellmans-gapc) for easy installation into your conda environment:
-```
-conda install -c bioconda bellmans-gapc
-```
-
-### Ubuntu
-
-Bellman's GAP is available as a pre-compiled Debian package via Ubuntus launchpad system, a Ubuntu Personal Package Archive (PPA).
-Packages for Ubuntu versions 16.04 (Xenial) and newer can be obtained from janssenlab/software.
-On your command line, execute the three following commands
-```
-sudo add-apt-repository ppa:janssenlab/software
-sudo apt-get update
-sudo apt-get install bellmansgapc
-```
-For older Ubuntu releases, have a look at bibi-help/bibitools (Ubuntu versions 10.04, 11.10, 12.04, 12.10, 13.04, 13.10, 14.04, 14.10, 15.04) 
-```
-sudo add-apt-repository ppa:bibi-help/bibitools
-sudo apt-get update
-sudo apt-get install bellmansgapc
-```
-
-### MacPorts
-
-Under Mac OS X you may want to use MacPorts to install the compiler. There is a (most likely outdated) ports description on the BiBiServ MacPorts repository. You can install GAP-C via:
-
-`$ sudo port install http://bibiserv.techfak.uni-bielefeld.de/resources/macports/ports/lang/gapc.tgz`
