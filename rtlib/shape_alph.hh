@@ -34,7 +34,7 @@ struct ShapeAlph {
      * make sufficient space for the number of different
      * characters in your alphabet
      */
-    char_width = 4
+    char_width = 8
   };
 
  private:
@@ -94,20 +94,93 @@ struct ShapeAlph {
         // set_one(t, l-1);
         t |= T(9) << (l-(char_width-1));
         break;
+      case 'L' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(10) << (l-(char_width-1));
+        break;
+      case 'A' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(11) << (l-(char_width-1));
+        break;
+      case 'M' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(12) << (l-(char_width-1));
+        break;
+      case 'g' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(13) << (l-(char_width-1));
+        break;
+      case 'u' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(14) << (l-(char_width-1));
+        break;
+      case 't' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(15) << (l-(char_width-1));
+        break;
+      case 'c' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(16) << (l-(char_width-1));
+        break;
+      case 'k' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(17) << (l-(char_width-1));
+        break;
+      case 's' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(18) << (l-(char_width-1));
+        break;
+      case 'l' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(19) << (l-(char_width-1));
+        break;
+      case 'a' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(20) << (l-(char_width-1));
+        break;
+      case 'm' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(21) << (l-(char_width-1));
+        break;
+
       default: assert(false);
     }
   }
   char to_char(T &t, Size i) const {
     switch (t >> i & T(char_states)) {
-      case 1 : return '[';
-      case 2 : return ']';
-      case 3 : return '_';
-      case 4 : return 'G';
-      case 5 : return 'U';
-      case 6 : return 'T';
-      case 7 : return 'C';
-      case 8 : return 'K';
-      case 9 : return 'S';
+      case 1  : return '[';
+      case 2  : return ']';
+      case 3  : return '_';
+      case 4  : return 'G';
+      case 5  : return 'U';
+      case 6  : return 'T';
+      case 7  : return 'C';
+      case 8  : return 'K';
+      case 9  : return 'S';
+      case 10 : return 'L';
+      case 11 : return 'A';
+      case 12 : return 'M';
+      case 13 : return 'g';
+      case 14 : return 'u';
+      case 15 : return 't';
+      case 16 : return 'c';
+      case 17 : return 'k';
+      case 18 : return 's';
+      case 19 : return 'l';
+      case 20 : return 'a';
+      case 21 : return 'm';
       default: return 0;
     }
   }
