@@ -9,27 +9,24 @@
  | |_) |  __/ | | | | | | | (_| | | | | \__ \ | |__| |/ ____ \| |     
  |____/ \___|_|_|_| |_| |_|\__,_|_| |_| |___/  \_____/_/    \_\_|     
 ```                                                                      
-############# PLEASE READ ME BEFORE USING THIS REPO ###############
+## Usage
 
-This repo will be used to collect changes to the original gapc that I make while trying to implement RNA 3D Motifs into RNA secondary structure prediction.
-I will mostly keep all original functionalities and only add more, but I can not guarantee that my changes don't have unexpected consequences. Installation at this point is only available from source.
-For the original compiler please refer to /jlab/gapc.
-
-##############################################################
+Modified Bellman's GAP compiler for incorporation of RNA 3D Motifs into RNA secondary structure prediction.
+The compiler retains full functionality but output is formatted to comma separated format.
 
 ## Dependencies
 
 Bellman's GAP was tested on the following dependencies.
 
 compile time:
-- C++ compiler (GCC g++ for example)
-- C compiler (GCC for example)
-- Flex >= 2.5.34
-- GNU bison >= 2.4.1
-- GNU make >= 3.81
-- GSL (if not already installed, installation tested with GSL 2.7.1)
+- C++ compiler (GCC g++ for example, tested on g++ 13.2.0) 
+- C compiler (GCC for example, tested on gcc 13.2.0)
+- Flex >= 2.5.34 (tested on flex 2.6.4)
+- GNU bison >= 2.4.1 (tested on 3.8.2)
+- GNU make >= 3.81 (tested on 4.3)
+- GSL (tested on 2.7.1)
 - Mercurial >= 0.9.5
-- boost >=  1.36 (1.34 without the Accumulators Framework, installation with Boost 1.8.6 lead to issues, might need to use an older version)
+- boost >=  1.36 (1.34 without the Accumulators Framework, installation with Boost 1.83 works)
   - unittest framework (libboost-test-dev)
   - pool
   - program options (libboost-program-options-dev)
@@ -38,7 +35,7 @@ compile time:
 - ksh93 - or - bash >= 2.03.0(1) (only needed for test scripts)
 
 runtime:
-- boost >=  1.36 (1.34 without the Accumulators Framework)
+- boost >=  1.36 (1.34 without the Accumulators Framework, works with Boost 1.83)
   - pool
   - program options
   - cstdint
