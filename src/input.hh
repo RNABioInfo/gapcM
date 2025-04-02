@@ -43,7 +43,7 @@ class Input {
   // the implementation. Please keep in mind that
   // extending the list of modes must leave the MODE_END
   // element at the end of the enumeration.
-  enum Mode { RAW, RNA, UPPER, MODE_END };
+  enum Mode { RAW, RNA, RNALI, UPPER, MODE_END };
 
  private:
   //

@@ -1598,6 +1598,9 @@ void Printer::Cpp::print_seq_init(const AST &ast) {
       case Input::RNA:
         stream << indent() << "char_to_rna(" << *(*i)->name << ");\n";
         break;
+      case Input::RNALI:
+        stream << indent() << "char_to_rnali(" << *(*i)->name << ");\n";
+        break;     
       case Input::UPPER:
         stream << indent() << "char_to_upper(" << *(*i)->name << ");\n";
         break;

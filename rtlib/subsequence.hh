@@ -90,6 +90,8 @@ class Basic_Subsequence {
     }
 
     friend bool operator==(const Basic_Subsequence &a, const Basic_Subsequence &b) {
+      if (a.size() == 1 && a.size() == b.size())
+        return a.seq->seq[a.i] == b.seq->seq[b.i];
       if (a.size() != b.size()) {
         return false;
       }
@@ -97,7 +99,7 @@ class Basic_Subsequence {
         for (unsigned int p = 0; p < a.size(); p++) {
           int sum;
           sum = a.i + p;
-          if (base_t(a.seq->seq[sum]) == base_t(b.seq->seq[sum])) {
+          if (a.seq->seq[sum] == b.seq->seq[sum]) {
             continue;
           }
           else {
@@ -106,7 +108,7 @@ class Basic_Subsequence {
         }
         return true;
       }
-    }    
+    }   
 
     typedef alphabet* iterator;
     typedef const alphabet* const_iterator;

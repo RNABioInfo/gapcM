@@ -38,6 +38,7 @@
 #include <boost/cstdint.hpp>
 
 // FIXME profile this
+#include "ali_t.hh"
 #include "pool.hh"
 
 #include "subsequence.hh"
@@ -561,6 +562,19 @@ inline void append(
   t.append('>');
   str.append(t);
 }
+
+template<typename alphabet, typename pos_type>
+inline void ali_append(
+  String &str, const Basic_Subsequence<alphabet, pos_type> &sub){
+    if (sub.size() == 1){
+      str.append(ali_base_to_char(sub.seq->seq[sub.i]));
+    }
+    else {
+      for (const auto pos: sub) {
+        str.append(ali_base_to_char(pos));
+      }
+    }
+  }
 
 #include "bitops.hh"
 

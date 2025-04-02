@@ -32,6 +32,7 @@
 const char Input::map[][6] = {
   "raw",
   "rna",
+  "rnali",
   "upper"
 };
 
