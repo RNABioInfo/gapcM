@@ -25,6 +25,7 @@
 #ifndef RTLIB_SEQUENCE_HH_
 #define RTLIB_SEQUENCE_HH_
 
+#include "ali_t.hh"
 #include <errno.h>
 
 #include <cstring>
@@ -46,6 +47,15 @@ struct Copier {
     std::memcpy(r, x, l);
     return std::make_pair(r, l);
   }
+
+  std::pair<alphabet*, size_t> appender(const char *x, size_t l, const char *x2, size_t l2, const char * connect) const {
+    alphabet *r = new char[l+l2+1];
+    std::memcpy(r, x, l);
+    std::memcpy(r+l,connect,1);
+    std::memcpy(r+l+1,x2,l2);
+    return std::make_pair(r, l+l2+1);
+  }
+
   unsigned rows() const { return 1; }
   char *row(char *seq, unsigned x) { return seq; }
   const char *row(char *seq, unsigned x) const { return seq; }
@@ -253,10 +263,33 @@ class Basic_Sequence {
       n = p.second;
     }
 
+    void append(const char *s, pos_type l, const char* c){
+      std::pair<alphabet*,size_t> p = copier.appender(seq,n,s,l,c);
+      seq = p.first;
+      n = p.second;
+    }
+
+    friend bool operator==(const Basic_Sequence &a, const Basic_Sequence &b) {
+      if (a.size() != b.size()) {
+        return false;
+      }
+      else {
+        for (unsigned int p = 0; p < a.size(); p++) {
+          if (a[p] == b[p]) {
+            continue;
+          }
+          else {
+            return false;
+          }
+        }
+        return true;
+      }
+    }
+
  public:
     typedef alphabet alphabet_type;
     typedef char alphabet2;
-    Basic_Sequence(alphabet *s, pos_type l)
+    Basic_Sequence(const alphabet *s, const pos_type l)
       : seq(0) {
       copy(s, l);
     }
@@ -290,9 +323,13 @@ class Basic_Sequence {
     pos_type size() const { return n; }
 
     typedef alphabet * iterator;
+    typedef const alphabet* const_iterator;
 
     alphabet * begin() { return seq; }
     alphabet * end() { return seq + n; }
+
+    const_iterator begin() const {return seq;}
+    const_iterator end() const {return seq+n;}
 
     pos_type rows() const {
       return copier.rows();
@@ -325,8 +362,6 @@ inline char upper_case(char c) {
     return c;
   if (c == '|')
     return c;
-  if (c == '|')
-    return c;
   if (c == '~')
     return c;
   if (c == '*')
@@ -339,11 +374,36 @@ inline char upper_case(char c) {
     return c;
   if (c == '+')
     return c;
+  if (c == '$')
+    return c;
   if (c >= 'a')
     return c-('a'-'A');
   else
     return c;
 }
+
+// Standard
+#include <cstddef>
+
+struct Hash_ali_array {
+  template<typename alphabet, typename pos_type>
+    constexpr auto operator()(const Basic_Sequence<alphabet,pos_type> &seq) const -> std::size_t {
+        constexpr size_t SHIFT_RIGHT = 16;
+        constexpr size_t HASH_CONSTANT_1 = 0x45d9f3b;
+        constexpr size_t HASH_CONSTANT_2 = 0x9e3779b9;
+        constexpr int SEED_SHIFT_LEFT = 6;
+        constexpr int SEED_SHIFT_RIGHT = 2;
+
+        std::size_t seed = seq.size();
+        for (auto pos: seq) {
+            pos = ((pos >> SHIFT_RIGHT) ^ pos) * HASH_CONSTANT_1;
+            pos = ((pos >> SHIFT_RIGHT) ^ pos) * HASH_CONSTANT_1;
+            pos = (pos >> SHIFT_RIGHT) ^ pos;
+            seed ^= pos + HASH_CONSTANT_2 + (seed << SEED_SHIFT_LEFT) + (seed >> SEED_SHIFT_RIGHT);
+        }
+        return seed;
+    }
+};
 
 // template<typename alphabet, typename pos_type>
 inline const char &column(

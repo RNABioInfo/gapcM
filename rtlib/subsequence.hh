@@ -108,7 +108,7 @@ class Basic_Subsequence {
         }
         return true;
       }
-    }   
+    }
 
     typedef alphabet* iterator;
     typedef const alphabet* const_iterator;
