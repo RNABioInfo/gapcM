@@ -34,7 +34,7 @@ struct ShapeAlph {
      * make sufficient space for the number of different
      * characters in your alphabet
      */
-    char_width = 8
+    char_width = 4
   };
 
  private:
@@ -109,52 +109,61 @@ struct ShapeAlph {
         // set_one(t, l-1);
         t |= T(12) << (l-(char_width-1));
         break;
-      case 'g' :
+      case 'D' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(13) << (l-(char_width-1));
         break;
-      case 'u' :
+      case 'g' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(14) << (l-(char_width-1));
         break;
-      case 't' :
+      case 'u' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(15) << (l-(char_width-1));
         break;
-      case 'c' :
+      case 't' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(16) << (l-(char_width-1));
         break;
-      case 'k' :
+      case 'c' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(17) << (l-(char_width-1));
         break;
-      case 's' :
+      case 'k' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(18) << (l-(char_width-1));
         break;
-      case 'l' :
+      case 's' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(19) << (l-(char_width-1));
         break;
-      case 'a' :
+      case 'l' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(20) << (l-(char_width-1));
         break;
-      case 'm' :
+      case 'a' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(21) << (l-(char_width-1));
         break;
-
+      case 'm' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(22) << (l-(char_width-1));
+        break;
+      case 'd' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(23) << (l-(char_width-1));
+        break;
       default: assert(false);
     }
   }
@@ -172,15 +181,17 @@ struct ShapeAlph {
       case 10 : return 'L';
       case 11 : return 'A';
       case 12 : return 'M';
-      case 13 : return 'g';
-      case 14 : return 'u';
-      case 15 : return 't';
-      case 16 : return 'c';
-      case 17 : return 'k';
-      case 18 : return 's';
-      case 19 : return 'l';
-      case 20 : return 'a';
-      case 21 : return 'm';
+      case 13 : return 'D';
+      case 14 : return 'g';
+      case 15 : return 'u';
+      case 16 : return 't';
+      case 17 : return 'c';
+      case 18 : return 'k';
+      case 19 : return 's';
+      case 20 : return 'l';
+      case 21 : return 'a';
+      case 22 : return 'm';
+      case 23 : return 'd';
       default: return 0;
     }
   }

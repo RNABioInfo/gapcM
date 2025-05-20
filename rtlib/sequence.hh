@@ -48,7 +48,7 @@ struct Copier {
     return std::make_pair(r, l);
   }
 
-  std::pair<alphabet*, size_t> appender(const char *x, size_t l, const char *x2, size_t l2, const char * connect) const {
+  std::pair<alphabet*, size_t> concater(const char *x, size_t l, const char *x2, size_t l2, const char * connect) const {
     alphabet *r = new char[l+l2+1];
     std::memcpy(r, x, l);
     std::memcpy(r+l,connect,1);
@@ -263,8 +263,9 @@ class Basic_Sequence {
       n = p.second;
     }
 
-    void append(const char *s, pos_type l, const char* c){
-      std::pair<alphabet*,size_t> p = copier.appender(seq,n,s,l,c);
+    void concat(const char *s, pos_type l){
+      const char connect = char_to_ali_base('$');
+      std::pair<alphabet*,size_t> p = copier.concater(seq,n,s,l,&connect);
       seq = p.first;
       n = p.second;
     }
