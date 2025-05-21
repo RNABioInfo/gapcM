@@ -25,7 +25,10 @@
 #ifndef RTLIB_SEQUENCE_HH_
 #define RTLIB_SEQUENCE_HH_
 
-#include "ali_t.hh"
+//Declaration of char_to_ali base from ali_t.hh, necessary for later Basic_sequence concatenation.
+char char_to_ali_base(char);
+
+
 #include <errno.h>
 
 #include <cstring>
