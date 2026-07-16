@@ -51,6 +51,13 @@ struct Copier {
     return std::make_pair(r, l);
   }
 
+  std::pair<alphabet*, size_t> copy(const char *x, size_t i, size_t j) const {
+    int l = j-i;
+    alphabet *r = new char[l];
+    std::memcpy(r, &x[i], l);
+    return std::make_pair(r, l);
+  }
+
   std::pair<alphabet*, size_t> concater(const char *x, size_t l, const char *x2, size_t l2, const char * connect) const {
     alphabet *r = new char[l+l2+1];
     std::memcpy(r, x, l);
@@ -300,6 +307,10 @@ class Basic_Sequence {
     explicit Basic_Sequence(alphabet *s) : seq(0) {
       n = std::strlen(s);
       copy(s, n);
+    }
+    Basic_Sequence(const alphabet *s, const pos_type i, const pos_type j)
+      : seq(0) {
+      copy(s, i, j);
     }
     Basic_Sequence()
       : seq(0), n(0) {}
