@@ -51,6 +51,13 @@ struct Copier {
     return std::make_pair(r, l);
   }
 
+  std::pair<alphabet*, size_t> copy(const char *x, unsigned int i, unsigned int j) const {
+    int l = j-i;
+    alphabet *r = new char[l];
+    std::memcpy(r, &x[i], l);
+    return std::make_pair(r, l);
+  }
+
   std::pair<alphabet*, size_t> copy(const char *x, size_t i, size_t j) const {
     int l = j-i;
     alphabet *r = new char[l];
@@ -302,6 +309,7 @@ class Basic_Sequence {
       seq = p.first;
       n = p.second;
     }
+
 
     void concat(const char *s, pos_type l){
       const char connect = char_to_ali_base('$');

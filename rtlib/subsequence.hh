@@ -75,6 +75,11 @@ class Basic_Subsequence {
       return (*seq)[j-1];
     }
 
+    const alphabet &back() const {
+      assert(seq);
+      return (*seq)[j-1];
+    }
+
     void empty() {
       seq = NULL;
     }
