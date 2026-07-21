@@ -26,8 +26,8 @@
 #define RTLIB_SEQUENCE_HH_
 
 //Declaration of char_to_ali base from ali_t.hh, necessary for later Basic_sequence concatenation.
+#include <iostream>
 char char_to_ali_base(char);
-
 
 #include <errno.h>
 
@@ -50,6 +50,27 @@ struct Copier {
     std::memcpy(r, x, l);
     return std::make_pair(r, l);
   }
+
+  std::pair<alphabet*, size_t> copy(const char *x, size_t i, size_t j) const {
+    int l = j-i;
+    alphabet *r = new char[l];
+    std::memcpy(r, &x[i], l);
+    return std::make_pair(r, l);
+  }
+
+  std::pair<alphabet*, size_t> copy(const char *x,  size_t i,  size_t j, std::vector<size_t> gap_locs) const {
+    int l = j-i-gap_locs.size();
+    alphabet *r = new char[l];
+    unsigned int current_location = 0;
+    for (unsigned int gap_num = 0; gap_num < gap_locs.size(); gap_num ++){
+      long unsigned int n = gap_locs[gap_num]-i-current_location-gap_num;
+      std::memcpy(r+current_location,&x[i+current_location],n);
+      current_location = gap_locs[gap_num]-i-current_location-gap_num;
+    }
+    std::memcpy(r+current_location,&x[i+current_location],j-gap_locs.back()-1);
+    return std::make_pair(r, l);
+  }
+
 
   std::pair<alphabet*, size_t> concater(const char *x, size_t l, const char *x2, size_t l2, const char * connect) const {
     alphabet *r = new char[l+l2+1];
@@ -266,6 +287,22 @@ class Basic_Sequence {
       n = p.second;
     }
 
+    void copy(const char *s, pos_type i, pos_type j, std::vector<long unsigned int> gaps){
+      delete[] seq;
+
+      std::pair<alphabet*, size_t> p = copier.copy(s,i,j,gaps);
+      seq=p.first;
+      n = p.second;
+    }
+
+    void copy(const char *s, pos_type i, pos_type j) {
+      delete[] seq;
+
+      std::pair<alphabet*, size_t> p = copier.copy(s, i,j);
+      seq = p.first;
+      n = p.second;
+    }
+
     void concat(const char *s, pos_type l){
       const char connect = char_to_ali_base('$');
       std::pair<alphabet*,size_t> p = copier.concater(seq,n,s,l,&connect);
@@ -301,6 +338,21 @@ class Basic_Sequence {
       n = std::strlen(s);
       copy(s, n);
     }
+
+    Basic_Sequence(const alphabet *s, const pos_type i, const pos_type j)
+      : seq(0) {
+      copy(s, i, j);
+    }
+
+    Basic_Sequence(const alphabet *s, const pos_type i, const pos_type j, std::vector<long unsigned int> gap_locs):seq(0){
+      if (!gap_locs.empty()){
+        copy(s,i,j,gap_locs);
+      }
+      else{
+        copy(s,i,j);
+      }
+    }
+
     Basic_Sequence()
       : seq(0), n(0) {}
     Basic_Sequence(const Basic_Sequence &o)
