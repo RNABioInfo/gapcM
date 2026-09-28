@@ -600,6 +600,14 @@ inline void append(Fiber<T, Size, alphset> &s, char c) {
 }
 
 template <typename T, typename Size, typename alphset >
+inline void append(Fiber<T, Size, alphset> &s, int i){
+  std::string stringd = std::to_string(i);
+  for (std::string::iterator it = stringd.begin(); it != stringd.end(); ++it) {
+    s.append(*it);
+  }
+}
+
+template <typename T, typename Size, typename alphset >
 inline void append(Fiber<T, Size, alphset> &s, const char *c, int i) {
   assert(i == 2);
   s.append(*c);

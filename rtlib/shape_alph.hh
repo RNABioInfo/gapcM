@@ -209,172 +209,220 @@ struct ShapeAlph {
         t |= T(27) << (l-(char_width-1));
         break;
           
-      case 'Y' :
+      case 'a' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(28) << (l-(char_width-1));
         break;
           
-      case 'Z' :
+      case 'b' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(29) << (l-(char_width-1));
         break;
 
-      case 'a' :
+      case 'c' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(30) << (l-(char_width-1));
         break;
         
-      case 'b' :
+      case 'd' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(31) << (l-(char_width-1));
         break;
   
-      case 'c' :
+      case 'e' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(32) << (l-(char_width-1));
         break;
         
-      case 'd' :
+      case 'f' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(33) << (l-(char_width-1));
         break;
           
-      case 'e' :
+      case 'g' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(34) << (l-(char_width-1));
         break;
           
-      case 'f' :
+      case 'h' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(35) << (l-(char_width-1));
         break;
           
-      case 'g' :
+      case 'i' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(36) << (l-(char_width-1));
         break;
           
-      case 'h' :
+      case 'j' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(37) << (l-(char_width-1));
         break;
           
-      case 'i' :
+      case 'k' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(38) << (l-(char_width-1));
         break;
           
-      case 'j' :
+      case 'l' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(39) << (l-(char_width-1));
         break;
           
-      case 'k' :
+      case 'm' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(40) << (l-(char_width-1));
         break;
           
-      case 'l' :
+      case 'n' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(41) << (l-(char_width-1));
         break;
           
-      case 'm' :
+      case 'o' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(42) << (l-(char_width-1));
         break;
           
-      case 'n' :
+      case 'p' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(43) << (l-(char_width-1));
         break;
           
-      case 'o' :
+      case 'q' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(44) << (l-(char_width-1));
         break;
           
-      case 'p' :
+      case 'r' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(45) << (l-(char_width-1));
         break;
           
-      case 'q' :
+      case 's' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(46) << (l-(char_width-1));
         break;
           
-      case 'r' :
+      case 't' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(47) << (l-(char_width-1));
         break;
           
-      case 's' :
+      case 'u' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(48) << (l-(char_width-1));
         break;
           
-      case 't' :
+      case 'v' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(49) << (l-(char_width-1));
         break;
           
-      case 'u' :
+      case 'w' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(50) << (l-(char_width-1));
         break;
           
-      case 'v' :
+      case 'x' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(51) << (l-(char_width-1));
         break;
           
-      case 'w' :
+      case '.' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(52) << (l-(char_width-1));
         break;
           
-      case 'x' :
+      case ',' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(53) << (l-(char_width-1));
         break;
           
-      case 'y' :
+      case '0' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(54) << (l-(char_width-1));
         break;
           
-      case 'z' :
+      case '1' :
         // set_one(t, l);
         // set_one(t, l-1);
         t |= T(55) << (l-(char_width-1));
+        break;
+
+      case '2' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(56) << (l-(char_width-1));
+        break;
+
+      case '3' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(57) << (l-(char_width-1));
+        break;
+
+      case '4' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(58) << (l-(char_width-1));
+        break;
+
+      case '5' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(59) << (l-(char_width-1));
+        break;
+
+      case '6' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(60) << (l-(char_width-1));
+        break;
+        
+      case '7' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(61) << (l-(char_width-1));
+        break;
+
+      case '8' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(62) << (l-(char_width-1));
+        break;
+
+      case '9' :
+        // set_one(t, l);
+        // set_one(t, l-1);
+        t |= T(63) << (l-(char_width-1));
         break;
 
       default: assert(false);
@@ -409,34 +457,42 @@ struct ShapeAlph {
       case 25 : return 'V';
       case 26 : return 'W';
       case 27 : return 'X';
-      case 28 : return 'Y';
-      case 29 : return 'Z';
-      case 30 : return 'a';
-      case 31 : return 'b';
-      case 32 : return 'c';
-      case 33 : return 'd';
-      case 34 : return 'e';
-      case 35 : return 'f';
-      case 36 : return 'g';
-      case 37 : return 'h';
-      case 38 : return 'i';
-      case 39 : return 'j';
-      case 40 : return 'k';
-      case 41 : return 'l';
-      case 42 : return 'm';
-      case 43 : return 'n';
-      case 44 : return 'o';
-      case 45 : return 'p';
-      case 46 : return 'q';
-      case 47 : return 'r';
-      case 48 : return 's';
-      case 49 : return 't';
-      case 50 : return 'u';
-      case 51 : return 'v';
-      case 52 : return 'w';
-      case 53 : return 'x';
-      case 54 : return 'y';
-      case 55 : return 'z';
+      case 28 : return 'a';
+      case 29 : return 'b';
+      case 30 : return 'c';
+      case 31 : return 'd';
+      case 32 : return 'e';
+      case 33 : return 'f';
+      case 34 : return 'g';
+      case 35 : return 'h';
+      case 36 : return 'i';
+      case 37 : return 'j';
+      case 38 : return 'k';
+      case 39 : return 'l';
+      case 40 : return 'm';
+      case 41 : return 'n';
+      case 42 : return 'o';
+      case 43 : return 'p';
+      case 44 : return 'q';
+      case 45 : return 'r';
+      case 46 : return 's';
+      case 47 : return 't';
+      case 48 : return 'u';
+      case 49 : return 'v';
+      case 50 : return 'w';
+      case 51 : return 'x';
+      case 52 : return '.';
+      case 53 : return ',';
+      case 54 : return '0';
+      case 55 : return '1';
+      case 56 : return '2';
+      case 57 : return '3';
+      case 58 : return '4';
+      case 59 : return '5';
+      case 60 : return '6';
+      case 61 : return '7';
+      case 62 : return '8';
+      case 63 : return '9';
       default: return 0;
     }
   }
