@@ -1,5 +1,5 @@
 gapcm (2026.09.29) noble; urgency=medium
 
-  * Initial release. (Closes: #XXXXXX)
+  * Initial release.
 
- -- msebeke  <marius.sebeke@ibmg.uni-stuttgart.de>  Tue, 29 Sep 2026 12:33:38 +0200
+ -- IBMG11-NB-SEBEKE <marius.sebeke@ibmg.uni-stuttgart.de>  Tue, 29 Sep 2026 15:03:39 +0200

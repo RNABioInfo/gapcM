@@ -1,7 +1,7 @@
 Source: gapcm
 Section: devel
 Priority: extra
-Maintainer: Marius Sebeke
+Maintainer: Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>
 Build-Depends: debhelper (>= 7), make (>= 3.81), flex (>= 2.5.34), bison (>= 2.4.1), libboost-all-dev (>= 1.40), git, libgsl-dev
 Standards-Version: 3.9.1
 Homepage: https://github.com/RNABioInfo/gapcM
