@@ -1,15 +1,16 @@
-Source: bellmansgapc
+Source: gapcm
 Section: devel
 Priority: extra
-Maintainer: Bielefeld BioInformatics Service <bibi-help@cebitec.uni-bielefeld.de>
+Maintainer: Marius Sebeke
 Build-Depends: debhelper (>= 7), make (>= 3.81), flex (>= 2.5.34), bison (>= 2.4.1), libboost-all-dev (>= 1.40), git, libgsl-dev
 Standards-Version: 3.9.1
-Homepage: http://bibiserv.cebitec.uni-bielefeld.de/bellmansgap/
+Homepage: https://github.com/RNABioInfo/gapcM
 
-Package: bellmansgapc
+Package: gapcm
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, g++ (>= 4:4.3.1), make (>= 3.81), libboost-all-dev (>= 1.40), libgsl-dev, libgmp3-dev, libatlas-base-dev
-Description: Bellman's GAP Dynamic Programming Files Compiler
+Description: Bellman's GAP Dynamic Programming Files Compiler 
+ with modification for incorporating RNA 3D Motifs into RNA secondary structure predictions.
  Bellman's GAP is a domain specific language for describing dynamic
  programming algorithms on sequences at a high level. I.e.
  GAP-L programs do not contain indices or DP recurrences.

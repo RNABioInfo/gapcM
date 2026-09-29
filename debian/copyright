@@ -1,15 +1,16 @@
 This work was packaged for Debian by:
 
-    Bielefeld BioInformatics Service <bibi-help@cebitec.uni-bielefeld.de> on Sat, 12 Jan 2013 11:48:38 +0200
+    Marius Sebeke, University of Stuttgart, Institute for Biomedical Genetics, Department for RNA Biology and Bioinformatics
 
 It was downloaded from:
 
-    <http://bibiserv.cebitec.uni-bielefeld.de/bellmansgap/>
+    https://github.com/RNABioInfo/gapcM.git
 
 Upstream Author(s):
 
 	Stefan Janssen <stefan.m.janssen@gmail.com>
     Georg Sauthoff <gsauthof@techfak.uni-bielefeld.de>
+    Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>
 
 Copyright:
 
