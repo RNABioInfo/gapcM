@@ -60,7 +60,7 @@ namespace po = boost::program_options;
 
 
 static void version() {
-  std::cout  << "gapc version " << gapc::version_id
+  std::cout  << "gapcM version " << gapc::version_id
         << std::endl << "  Copyright 2008-2011 Georg Sauthoff, GPL v3+"
         << std::endl << std::endl;
 }

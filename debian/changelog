@@ -1,5 +1,23 @@
+gapcm (2026.09.30~resolute1) resolute; urgency=medium
+
+  * Adding distribution versioning
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Wed, 30 Sep 2026 13:22:25 +0200
+
+gapcm (2026.09.30~jammy1) jammy; urgency=medium
+
+  * Adding distribution versioning
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Wed, 30 Sep 2026 11:38:03 +0200
+
+gapcm (2026.09.30~noble1) noble; urgency=medium
+
+  * Adding distribution versioning
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Wed, 30 Sep 2026 11:21:58 +0200
+
 gapcm (2026.09.29) noble; urgency=medium
 
   * Initial release.
 
- -- IBMG11-NB-SEBEKE <marius.sebeke@ibmg.uni-stuttgart.de>  Tue, 29 Sep 2026 15:03:39 +0200
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Tue, 29 Sep 2026 15:03:39 +0200
