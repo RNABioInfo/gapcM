@@ -25,7 +25,6 @@ compile time:
 - GNU bison >= 2.4.1 (tested on 3.8.2)
 - GNU make >= 3.81 (tested on 4.3)
 - GSL (tested on 2.7.1)
-- Mercurial >= 0.9.5
 - boost >=  1.36 (1.34 without the Accumulators Framework, installation with Boost 1.83 works)
   - unittest framework (libboost-test-dev)
   - pool
@@ -51,7 +50,7 @@ Always get the latest sources from github:
 
 ### from source
 
-To install Bellman's GAP from source call:
+To install the Bellman's GAP compiler from source call:
 
 1. `./configure --prefix=<install-path>`
 2. `make`
@@ -69,3 +68,14 @@ BISON=<bison path>
 --with-boost=<path to booth installation>
 --with-boost-program-options=<path to boost library program options> and --with-boost-unit-test-framework=<path to boost library unit test>
 ```
+### CMake
+Installing the Bellman's GAP compiler with CMake is slightly more convenient as
+it will automatically install FLEX, BISON, GSL and Boost for you. This will install
+the Bellman's GAP compiler and it's dependencies locally and does not require sudo privileges.
+To install the Bellman's from source (but more convenient!) with CMake:
+
+ 1. Create a build directory in `/gapcM/`, e.g. `mkdir build`
+ 2. Move into the build directory with `cd build`
+ 3. Call `cmake ..`
+ 4. Call `cmake --build .`
+
