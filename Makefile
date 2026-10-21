@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: gapc
+all: gapcM
 
 ifeq ($(findstring $(MAKECMDGOALS),clean clean_all),)
 
@@ -97,7 +97,7 @@ TEMP = $(GEN_CXXFILES) $(OFILES) $(DEPS)\
        $(TEST_TEMP) \
        src/parser.output src/parser.hh src/stack.hh src/location.hh \
        src/position.hh \
-       gapc \
+       gapcM \
        $(MODTESTS) \
        $(MODOUTSIDETESTS) \
        stats testdata/modtest/stats.o \
@@ -121,9 +121,9 @@ backtrack dep tab product listsizes indices code: \
 %: $(MAIN_OBJ) testdata/modtest/%.o
 	$(CXX) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
-gapc: LDLIBS =  $(BOOST_PROGRAM_OPTIONS_LIB)
+gapcM: LDLIBS =  $(BOOST_PROGRAM_OPTIONS_LIB)
 
-gapc: src/gapc.o $(MAIN_OBJ) src/version.o src/prefix.o
+gapcM: src/gapc.o $(MAIN_OBJ) src/version.o src/prefix.o
 	$(CXX) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
 
@@ -227,7 +227,7 @@ src/prefix.cc: config.mf
 
 .PHONY: install
 
-install: gapc librna/librna$(SO_SUFFIX)
+install: gapcM librna/librna$(SO_SUFFIX)
 	$(SHELL) makefiles/run.sh $(PREFIX)
 
 install-librna: librna/librna$(SO_SUFFIX)
@@ -296,7 +296,7 @@ outsidetests: $(MODOUTSIDETESTS)
 
 # paraltest
 
-paraltests: gapc librna/librna.a testdata/fp_eq
+paraltests: gapcM librna/librna.a testdata/fp_eq
 
 paraltest/fp_eq: LDFLAGS=$(C_LDFLAGS)
 

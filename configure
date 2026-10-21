@@ -609,11 +609,11 @@ MFLAGS=
 MAKEFLAGS=
 
 # Identity of this package.
-PACKAGE_NAME='gapc'
-PACKAGE_TARNAME='gapc'
+PACKAGE_NAME='gapcM'
+PACKAGE_TARNAME='gapcM'
 PACKAGE_VERSION='pr1.0'
-PACKAGE_STRING='gapc pr1.0'
-PACKAGE_BUGREPORT='stefan.janssen@computational.bio.uni-giessen.de'
+PACKAGE_STRING='gapcM pr1.0'
+PACKAGE_BUGREPORT='marius.sebeke@ibmg.uni-stuttgart.de'
 PACKAGE_URL=''
 
 # Factoring default headers for most tests.

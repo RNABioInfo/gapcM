@@ -1,3 +1,21 @@
+gapcm (2026.10.21~resolute1) resolute; urgency=medium
+
+  * Changed binary name to gapcM
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Wed, 21 Oct 2026 15:08:41 +0200
+
+gapcm (2026.10.21~jammy1) jammy; urgency=medium
+
+  * Changed binary name to gapcM
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Wed, 21 Oct 2026 15:07:16 +0200
+
+gapcm (2026.10.21~noble1) noble; urgency=medium
+
+  * Changed binary name to gapcM
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Wed, 21 Oct 2026 14:51:57 +0200
+
 gapcm (2026.09.30~resolute1) resolute; urgency=medium
 
   * Adding distribution versioning
