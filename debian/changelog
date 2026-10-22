@@ -1,3 +1,21 @@
+gapcm (2026.10.22~resolute1) resolute; urgency=medium
+
+  * Fix for import error
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Thu, 22 Oct 2026 13:31:44 +0200
+
+gapcm (2026.10.22~jammy1) jammy; urgency=medium
+
+  * Fix for import error
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Thu, 22 Oct 2026 13:30:57 +0200
+
+gapcm (2026.10.22~noble1) noble; urgency=medium
+
+  * Fix for import error
+
+ -- Marius Sebeke <marius.sebeke@ibmg.uni-stuttgart.de>  Thu, 22 Oct 2026 13:29:39 +0200
+
 gapcm (2026.10.21~resolute1) resolute; urgency=medium
 
   * Changed binary name to gapcM
