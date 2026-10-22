@@ -9,7 +9,7 @@ if [ $# -lt 1 ]; then
 fi
 
 PREFIX="$1"
-SHARE="$PREFIX/share/gapc"
+SHARE="$PREFIX/share/gapcM"
 EXAMPLES="$SHARE/examples"
 
 SED=`grep SED config.mf | tr -d ' ' | cut -d= -f2`
@@ -34,7 +34,7 @@ set +e
 install -d $PREFIX/lib
 set -e
 
-install -m 755 gapc $PREFIX/bin
+install -m 755 gapcM $PREFIX/bin
 
 for i in rtlib/*; do
   if [[ ! -d $i ]]; then
