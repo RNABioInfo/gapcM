@@ -2789,7 +2789,7 @@ void Printer::Cpp::makefile(const Options &opts) {
   stream << "RTLIB_LDLIBS = $(RT_LDLIBS)\n";
   stream << "RTLIB_CPPFLAGS = $(RT_CPPFLAGS)\n\n";
   if (*gapc::prefix) {
-    std::string mf = std::string(gapc::prefix) + "/share/gapc/config" +
+    std::string mf = std::string(gapc::prefix) + "/share/gapcM/config" +
       std::string(gapc::systemsuffix) + ".mf";
     stream << "ifeq \"$(origin NO_CONFIG_MF)\" \"undefined\"" << endl
       << "$(info Including global makefile " << mf << ")" << endl

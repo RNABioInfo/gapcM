@@ -9,7 +9,7 @@ if [ $# -lt 1 ]; then
 fi
 
 PREFIX="$1"
-SHARE="$PREFIX/share/gapc"
+SHARE="$PREFIX/share/gapcM"
 EXAMPLES="$SHARE/examples"
 
 SED=`grep SED config.mf | tr -d ' ' | cut -d= -f2`
