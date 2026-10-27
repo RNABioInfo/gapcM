@@ -24,7 +24,7 @@ compile time:
 - Flex >= 2.5.34 (tested on flex 2.6.4)
 - GNU bison >= 2.4.1 (tested on 3.8.2)
 - GNU make >= 3.81 (tested on 4.3)
-- GSL (tested on 2.7.1)
+- GSL >= 1.0 (tested on 2.7.1)
 - boost >=  1.36 (1.34 without the Accumulators Framework, installation with Boost 1.83 works)
   - unittest framework (libboost-test-dev)
   - pool
