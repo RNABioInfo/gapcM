@@ -32,7 +32,7 @@ endmacro()
 
 test_pack(BISON 2.4.1 3.8)
 test_pack(FLEX 2.5.34 2.6.4)
-test_pack(GSL 2.7 2.8)
+test_pack(GSL 1.0 2.8)
 test_pack_boost(Boost 1.36 1.8.6 list(test,program_options,system,filesystem,serialization))
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/CMakes/gapcM-latest.cmake)
