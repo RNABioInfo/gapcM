@@ -79,3 +79,13 @@ To install the Bellman's from source (but more convenient!) with CMake:
  3. Call `cmake ..`
  4. Call `cmake --build .`
 
+### Ubuntu Launchpad
+
+The gapcM is also available as a pre-compiled Debian package through Ubuntu Launchpad from my PPA. Available for ubuntu LTS releases resolute(22.04) and noble(24.04). To access the launchpad and download the binary run:
+```
+sudo add-apt-repository ppa:msebeke/software
+sudo apt-get update
+sudo apt-get install gapcm
+```
+
+Beware if you are trying to use this with RNAmotiFold, as it depends on Python3.12 which is not the default for ubuntu 22.04! You may need to install a different python version using pyenv or from the python website.
